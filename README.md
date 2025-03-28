@@ -178,7 +178,6 @@ plt.ylabel('loss', fontsize=16)
 plt.yscale('log')
 plt.legend(fontsize=16)
 plt.show()
-![image](https://github.com/user-attachments/assets/40240724-912b-4a8c-a57f-6cea9201175e)
 ```
 - Plots the changes in **training loss (`train_loss`)** and **validation loss (`val_loss`)**.  
 - Uses a logarithmic scale for the y-axis (`yscale('log')`) to better observe value changes.  
@@ -195,8 +194,9 @@ plt.xlabel('epoch', fontsize=16)
 plt.ylabel('accuracy', fontsize=16)
 plt.legend(fontsize=16)
 plt.show()
-![image](https://github.com/user-attachments/assets/4c460105-1185-4077-a746-e7f91c725279)
 ```
+(https://github.com/user-attachments/assets/4c460105-1185-4077-a746-e7f91c725279)](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/train_acc.png)
+
 - Plots the changes in **training accuracy (`train_acc`)** and **validation accuracy (`val_acc`)**.  
 - Observes whether the training curve stabilizes over time.  
 - Helps identify potential overfitting issues.  
