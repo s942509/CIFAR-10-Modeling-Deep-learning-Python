@@ -247,6 +247,5 @@ plt.xlabel("prediction")
 plt.ylabel("target")
 plt.show()
 ```
-![confusion matrix.png](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/confusion%20matrix.png)
-
+![4confusion matrix.png](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/4confusion%20matrix.png)
 While not necessarily the best in all cases, this model strikes a good balance between accuracy and generalization.  
