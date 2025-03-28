@@ -195,7 +195,7 @@ plt.ylabel('accuracy', fontsize=16)
 plt.legend(fontsize=16)
 plt.show()
 ```
-(https://github.com/user-attachments/assets/4c460105-1185-4077-a746-e7f91c725279)](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/train_acc.png)
+![train_acc.png](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/train_acc.png)
 
 - Plots the changes in **training accuracy (`train_acc`)** and **validation accuracy (`val_acc`)**.  
 - Observes whether the training curve stabilizes over time.  
@@ -206,7 +206,6 @@ model = load_model('cnn_best_model.h5')
 
 # test model
 model.evaluate(X_test, y_test)
-![image](https://github.com/user-attachments/assets/8ae712c3-f931-4304-90f2-bb113a374a05)
 ```
 - Loads the best model (`cnn_best_model.h5`).  
 - Evaluates the model using the **test dataset** (`X_test`, `y_test`).  
