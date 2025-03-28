@@ -44,11 +44,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix     
 ``` 
-*Library Overview
- *NumPy, Pandas: Used for data manipulation and numerical operations.
+*Library Overview:
+-*NumPy, Pandas: Used for data manipulation and numerical operations.
 
- *TensorFlow / Keras: Provides tools to build and train deep learning models.
+-*TensorFlow / Keras: Provides tools to build and train deep learning models.
 
- *Matplotlib, Seaborn: Used for visualizing data and model performance.
+-*Matplotlib, Seaborn: Used for visualizing data and model performance.
 
- *Scikit-learn: Utilized for computing the confusion matrix to evaluate model performance.
+-*Scikit-learn: Utilized for computing the confusion matrix to evaluate model performance.
