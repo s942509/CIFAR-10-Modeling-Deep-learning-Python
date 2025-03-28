@@ -179,9 +179,7 @@ plt.yscale('log')
 plt.legend(fontsize=16)
 plt.show()
 ```
-![train_loss.png](CIFAR-10-Modeling-Deep-learning-Python/train_loss.png at main · s942509/CIFAR-10-Modeling-Deep-learning-Python)
-![image](https://github.com/user-attachments/assets/3b90188b-28de-44f4-b144-c118d686fd15)
-
+![train_loss.png](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/train_loss.png)
 - Plots the changes in **training loss (`train_loss`)** and **validation loss (`val_loss`)**.  
 - Uses a logarithmic scale for the y-axis (`yscale('log')`) to better observe value changes.  
 - If the validation loss continues to decrease, it indicates that the model is learning meaningful features.
