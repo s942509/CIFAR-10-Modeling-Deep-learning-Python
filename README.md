@@ -182,4 +182,21 @@ plt.show()
 ```
 - Plots the changes in **training loss (`train_loss`)** and **validation loss (`val_loss`)**.  
 - Uses a logarithmic scale for the y-axis (`yscale('log')`) to better observe value changes.  
-- If the validation loss continues to decrease, it indicates that the model is learning meaningful features.    
+- If the validation loss continues to decrease, it indicates that the model is learning meaningful features.
+# Plot Accuracy Changes
+```python
+train_acc = hist.history["sparse_categorical_accuracy"]
+val_acc = hist.history["val_sparse_categorical_accuracy"]
+
+plt.figure(figsize=(8, 4))
+plt.plot(range(len(train_acc)), train_acc, label='train_acc')
+plt.plot(range(len(val_acc)), val_acc, label='valid_acc')
+plt.xlabel('epoch', fontsize=16)
+plt.ylabel('accuracy', fontsize=16)
+plt.legend(fontsize=16)
+plt.show()
+![image](https://github.com/user-attachments/assets/4c460105-1185-4077-a746-e7f91c725279)
+```
+- Plots the changes in **training accuracy (`train_acc`)** and **validation accuracy (`val_acc`)**.  
+- Observes whether the training curve stabilizes over time.  
+- Helps identify potential overfitting issues.  
