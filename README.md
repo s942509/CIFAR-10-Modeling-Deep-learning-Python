@@ -79,6 +79,7 @@ for i in range(10):
         ax.set_xticks([])
         ax.set_yticks([])
 ```
+![CIFAR-10 Dataset.png](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/CIFAR-10%20Dataset.png)
 This code uses Matplotlib to display sample images from the CIFAR-10 training dataset. It selects 5 images from each of the 10 categories, using `np.where(y_train == i)[0][:5] `to fetch 5 images for each class and displays them in a 5x10 grid.
 # Check the Shape of the Data
 ```python
