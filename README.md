@@ -26,7 +26,7 @@ This project trains a **Convolutional Neural Network (CNN)** for image classific
 6. **Evaluate the Best Model**  
    - Load the best model and evaluate it on the **test dataset** for final performance assessment.
 
-# 📌 Required Python Libraries
+## Required Python Libraries
 
 Before running the model, make sure to install and import the necessary libraries:
 
