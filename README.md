@@ -220,4 +220,12 @@ The goal of this program is to train a **CNN-based image classification model** 
 3. Apply **data augmentation** techniques to increase the diversity of the training data.  
 4. Use **ModelCheckpoint & EarlyStopping** to optimize the training process and ensure the best model is saved.  
 5. Plot the **loss and accuracy curves** during training to monitor the model’s learning progress.  
-6. Load the **best model** and perform a **final evaluation** on the test dataset.  
+6. Load the **best model** and perform a **final evaluation** on the test dataset.
+# Experiment Results
+
+| Trial No. | Configuration | Accuracy (X_test → y_test) | Remarks |
+|-----------|----------------------------|------------------|---------------------------|
+| 1 | Initial | 0.31 | epoch = 10 |
+| 2 | Fully Connected Layer: 1024 Nodes | 0.41 | epoch = 10 |
+| 3 | Fully Connected Layer: 1024 Nodes + Dropout 0.5 | 0.29 | epoch = 10 |
+| 4 | CNN with Early Stopping, 1024 Nodes, Dropout 0.2 | 0.75 | Added Dropout 0.2 to prevent overfitting |
