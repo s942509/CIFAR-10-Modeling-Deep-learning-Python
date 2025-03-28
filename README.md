@@ -24,4 +24,23 @@ This project trains a **Convolutional Neural Network (CNN)** for image classific
    - Plot the **loss curve** and **accuracy curve** to monitor model learning.  
 
 6. **Evaluate the Best Model**  
-   - Load the best model and evaluate it on the **test dataset** for final performance assessment. 
+   - Load the best model and evaluate it on the **test dataset** for final performance assessment.
+
+# 📌 Required Python Libraries
+
+Before running the model, make sure to install and import the necessary libraries:
+
+``` ruby
+# Import essential libraries
+import numpy as np
+import pandas as pd
+from tensorflow.keras.models import Sequential, Model, load_model
+from tensorflow.keras.layers import Dense, Conv2D, MaxPool2D, Flatten, Dropout, BatchNormalization, Activation
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.datasets import cifar10
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import confusion_matrix     
+``` 
