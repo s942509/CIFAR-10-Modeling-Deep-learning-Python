@@ -52,3 +52,10 @@ Library Overview:
 - Matplotlib, Seaborn: Used for visualizing data and model performance.
 
 - Scikit-learn: Utilized for computing the confusion matrix to evaluate model performance.
+# 📥 Load CIFAR-10 Dataset
+
+To load the **CIFAR-10** dataset, use the following code:
+
+```python
+# Load CIFAR-10 dataset
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()  
