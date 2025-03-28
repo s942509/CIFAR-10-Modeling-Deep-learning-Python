@@ -229,3 +229,12 @@ The goal of this program is to train a **CNN-based image classification model** 
 | 2 | Fully Connected Layer: 1024 Nodes | 0.41 | epoch = 10 |
 | 3 | Fully Connected Layer: 1024 Nodes + Dropout 0.5 | 0.29 | epoch = 10 |
 | 4 | CNN with Early Stopping, 1024 Nodes, Dropout 0.2 | 0.75 | Added Dropout 0.2 to prevent overfitting |
+# Model Performance Comparison
+
+The **4th trial** (CNN with Early Stopping, 1024 Nodes, Dropout 0.2) appears to perform **better than the others**, achieving the **highest accuracy (0.75)**.  
+
+- **CNN** effectively captures spatial features, making it well-suited for image classification.  
+- **Early Stopping** helps prevent overfitting by stopping training when validation loss no longer improves.  
+- **Dropout 0.2** seems to enhance generalization, whereas Dropout 0.5 in the 3rd trial may have limited learning.  
+
+While not necessarily the best in all cases, this model strikes a good balance between accuracy and generalization.  
