@@ -84,4 +84,4 @@ This code uses Matplotlib to display sample images from the CIFAR-10 training da
 ```python
 print(X_train.shape)
 ```
-##Check the shape of X_train (the training dataset), which is typically (50000, 32, 32, 3), meaning there are 50,000 images, each with a size of 32×32 pixels and 3 color channels (RGB).
+Check the shape of X_train (the training dataset), which is typically (50000, 32, 32, 3), meaning there are 50,000 images, each with a size of 32×32 pixels and 3 color channels (RGB).
