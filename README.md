@@ -139,3 +139,29 @@ datagen.fit(X_train)![image](https://github.com/user-attachments/assets/ea416b75
 - `rotation_range=10`: Randomly rotates images by ±10°.  
 - `width_shift_range=0.3` & `height_shift_range=0.3`: Randomly shifts images horizontally and vertically by 30%.  
 - `horizontal_flip=False` & `vertical_flip=False`: No horizontal or vertical flipping.    
+# Train the Model
+```python
+batch_size = 256
+valid_samples = 5000
+train_samples = len(X_train) - valid_samples
+
+mc = ModelCheckpoint("cnn_best_model.h5", monitor="val_loss", save_best_only=True, verbose=1)
+es = EarlyStopping(monitor='val_loss', patience=15)
+
+hist = model.fit(datagen.flow(X_train[:train_samples], y_train[:train_samples], batch_size=batch_size),
+                 steps_per_epoch = train_samples / batch_size,
+                 epochs=10,
+                 callbacks=[mc, es],
+                 validation_data=datagen.flow(X_train[-valid_samples:], y_train[-valid_samples:], batch_size=batch_size),
+                 validation_steps = valid_samples / batch_size
+                 )
+![image](https://github.com/user-attachments/assets/767daf72-4524-429d-a12f-d7ac82bf6760)
+
+```
+- **ModelCheckpoint**: Saves the best model (`cnn_best_model.h5`) whenever `val_loss` decreases during training.  
+- **EarlyStopping**: Stops training if `val_loss` does not improve for 15 consecutive epochs to prevent overfitting.  
+- **model.fit()**:  
+  - Trains on `X_train[:train_samples]` (approximately 45,000 images).  
+  - `steps_per_epoch = train_samples / batch_size` determines the number of mini-batch iterations per epoch.  
+  - `epochs=10`: Trains the model for 10 epochs (adjustable).  
+  - **validation_data**: Uses 5,000 validation images for evaluation.  
