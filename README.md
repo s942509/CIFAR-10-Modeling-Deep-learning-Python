@@ -235,6 +235,17 @@ The **4th trial** (CNN with Early Stopping, 1024 Nodes, Dropout 0.2) appears to 
 
 - **CNN** effectively captures spatial features, making it well-suited for image classification.  
 - **Early Stopping** helps prevent overfitting by stopping training when validation loss no longer improves.  
-- **Dropout 0.2** seems to enhance generalization, whereas Dropout 0.5 in the 3rd trial may have limited learning.  
+- **Dropout 0.2** seems to enhance generalization, whereas Dropout 0.5 in the 3rd trial may have limited learning.
+Uses the trained model to predict labels for X_test by generating a **confusion matrix** for the test dataset.
+```python
+_pred = np.argmax(model.predict(X_test),axis=1)
 
+cnf_matrix = confusion_matrix(y_test, y_pred)
+
+sns.heatmap(cnf_matrix, annot=True, fmt='d', cmap='summer')
+plt.xlabel("prediction")
+plt.ylabel("target")
+plt.show()
+```
+![confusion matrix](https://github.com/s942509/CIFAR-10-Modeling-Deep-learning-Python/blob/main/train_acc.p)
 While not necessarily the best in all cases, this model strikes a good balance between accuracy and generalization.  
