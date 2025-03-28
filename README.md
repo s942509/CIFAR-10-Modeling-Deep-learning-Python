@@ -210,4 +210,14 @@ model.evaluate(X_test, y_test)
 ```
 - Loads the best model (`cnn_best_model.h5`).  
 - Evaluates the model using the **test dataset** (`X_test`, `y_test`).  
-- Computes the final **accuracy** of the model.  
+- Computes the final **accuracy** of the model.
+# Summary of Results
+
+The goal of this program is to train a **CNN-based image classification model** for the CIFAR-10 dataset. The key steps are as follows:
+
+1. Load the **CIFAR-10 dataset**, splitting it into a **training set (50,000 images)** and a **test set (10,000 images)**.  
+2. Build a **CNN model** using convolutional layers, pooling layers, BatchNormalization, and Dropout to enhance performance.  
+3. Apply **data augmentation** techniques to increase the diversity of the training data.  
+4. Use **ModelCheckpoint & EarlyStopping** to optimize the training process and ensure the best model is saved.  
+5. Plot the **loss and accuracy curves** during training to monitor the model’s learning progress.  
+6. Load the **best model** and perform a **final evaluation** on the test dataset.  
