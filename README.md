@@ -85,3 +85,34 @@ This code uses Matplotlib to display sample images from the CIFAR-10 training da
 print(X_train.shape)
 ```
 Check the shape of X_train (the training dataset), which is typically (50000, 32, 32, 3), meaning there are 50,000 images, each with a size of 32×32 pixels and 3 color channels (RGB).
+# Build a CNN (Convolutional Neural Network) Model
+```python
+model = Sequential()
+
+model.add(BatchNormalization(input_shape=(32, 32, 3)))
+
+model.add(Conv2D(filters=32, kernel_size=(3,3), strides=(1,1)))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(MaxPool2D(pool_size=(2,2)))
+
+model.add(Flatten())
+
+model.add(Dense(1024, activation="relu"))
+model.add(Dropout(0.5))
+model.add(Dense(10, activation='softmax'))
+![image](https://github.com/user-attachments/assets/5aaf4891-6352-4008-8a26-27183c76dcc3)
+
+```
+This is a Convolutional Neural Network (CNN) with the following main architecture:
+
+1. **BatchNormalization**: Normalizes the input images to help stabilize training.
+2. **Conv2D (Convolutional Layer)**: Uses 32 filters of size 3×3 to extract features.
+3. **BatchNormalization**: Makes the data distribution more stable and improves training effectiveness.
+4. **Activation('relu')**: Applies the ReLU activation function, enabling the model to learn nonlinear features.
+5. **MaxPool2D (Pooling Layer)**: Reduces dimensionality and computational load.
+6. **Flatten**: Flattens the CNN output into a one-dimensional vector to pass into the fully connected layer.
+7. **Dense (Fully Connected Layer)**:
+   - 1024 neurons + ReLU: Learns higher-level features.
+   - Dropout(0.5): Prevents overfitting.
+   - Output Layer (10 classes + Softmax): Classifies the CIFAR-10 dataset into 10 categories.
