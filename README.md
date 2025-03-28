@@ -59,3 +59,5 @@ To load the **CIFAR-10** dataset, use the following code:
 ```python
 # Load CIFAR-10 dataset
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()  
+```
+- CIFAR-10 is a commonly used image classification dataset that contains 10 different categories, such as airplanes, cars, cats, dogs, and others.
