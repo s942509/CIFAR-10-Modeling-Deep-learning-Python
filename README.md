@@ -80,3 +80,8 @@ for i in range(10):
         ax.set_yticks([])
 ```
 This code uses Matplotlib to display sample images from the CIFAR-10 training dataset. It selects 5 images from each of the 10 categories, using `np.where(y_train == i)[0][:5] `to fetch 5 images for each class and displays them in a 5x10 grid.
+# Check the Shape of the Data
+```python
+print(X_train.shape)
+```
+##Check the shape of X_train (the training dataset), which is typically (50000, 32, 32, 3), meaning there are 50,000 images, each with a size of 32×32 pixels and 3 color channels (RGB).
