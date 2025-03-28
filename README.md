@@ -1,5 +1,5 @@
 # CIFAR-10-Modeling-Deep-learning-Python
-# CNN Training for CIFAR-10 Image Classification
+## CNN Training for CIFAR-10 Image Classification
 
 This project trains a **Convolutional Neural Network (CNN)** for image classification using the CIFAR-10 dataset.  
 
