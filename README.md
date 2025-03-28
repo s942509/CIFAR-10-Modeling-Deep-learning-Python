@@ -123,4 +123,19 @@ model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(learning_ra
 ```
 - **Loss Function**: `sparse_categorical_crossentropy` (suitable for labels that are not one-hot encoded).  
 - **Optimizer**: `Adam` with a learning rate of 0.005.  
-- **Evaluation Metric**: `sparse_categorical_accuracy` to measure prediction accuracy.  
+- **Evaluation Metric**: `sparse_categorical_accuracy` to measure prediction accuracy.
+# Data Augmentation
+```python
+datagen = ImageDataGenerator(rotation_range=10,
+                             width_shift_range=0.3,
+                             height_shift_range=0.3,
+                             horizontal_flip=False,
+                             vertical_flip=False
+                             )
+datagen.fit(X_train)![image](https://github.com/user-attachments/assets/ea416b75-801e-4902-8f97-ee64ee940d57)
+```
+**Data Augmentation**: Expands the dataset by applying random transformations such as rotation and translation to improve the model's generalization ability.  
+
+- `rotation_range=10`: Randomly rotates images by ±10°.  
+- `width_shift_range=0.3` & `height_shift_range=0.3`: Randomly shifts images horizontally and vertically by 30%.  
+- `horizontal_flip=False` & `vertical_flip=False`: No horizontal or vertical flipping.    
