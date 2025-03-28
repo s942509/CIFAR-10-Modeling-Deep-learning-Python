@@ -61,3 +61,21 @@ To load the **CIFAR-10** dataset, use the following code:
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()  
 ```
 CIFAR-10 is a commonly used image classification dataset that contains 10 different categories, such as airplanes, cars, cats, dogs, and others.
+## Visualizing CIFAR-10 Dataset
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib import gridspec
+
+# Assuming X_train and y_train are predefined
+fig = plt.figure(figsize=(15, 8))
+gs = gridspec.GridSpec(5, 10)  # Create a 5x10 grid
+for i in range(10):
+    index = np.where(y_train == i)[0][:5]  # Get 5 images from each category
+    for j in range(5):
+        ax = plt.subplot(gs[j, i])
+        ax.imshow(X_train[index[j], :, :], 'gray')
+        ax.set_title(y_train[index[j]])
+        ax.set_xticks([])
+        ax.set_yticks([])
+```
