@@ -238,7 +238,7 @@ The **4th trial** (CNN with Early Stopping, 1024 Nodes, Dropout 0.2) appears to 
 - **Dropout 0.2** seems to enhance generalization, whereas Dropout 0.5 in the 3rd trial may have limited learning.
 Uses the trained model to predict labels for X_test by generating a **confusion matrix** for the test dataset.
 ```python
-_pred = np.argmax(model.predict(X_test),axis=1)
+y_pred = np.argmax(model.predict(X_test),axis=1)
 
 cnf_matrix = confusion_matrix(y_test, y_pred)
 
