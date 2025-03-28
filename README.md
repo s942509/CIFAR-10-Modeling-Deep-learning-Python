@@ -200,3 +200,14 @@ plt.show()
 - Plots the changes in **training accuracy (`train_acc`)** and **validation accuracy (`val_acc`)**.  
 - Observes whether the training curve stabilizes over time.  
 - Helps identify potential overfitting issues.  
+# Test the Best Model
+```python
+model = load_model('cnn_best_model.h5')
+
+# test model
+model.evaluate(X_test, y_test)
+![image](https://github.com/user-attachments/assets/8ae712c3-f931-4304-90f2-bb113a374a05)
+```
+- Loads the best model (`cnn_best_model.h5`).  
+- Evaluates the model using the **test dataset** (`X_test`, `y_test`).  
+- Computes the final **accuracy** of the model.  
