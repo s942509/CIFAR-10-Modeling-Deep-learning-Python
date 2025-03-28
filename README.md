@@ -116,3 +116,11 @@ This is a Convolutional Neural Network (CNN) with the following main architectur
    - 1024 neurons + ReLU: Learns higher-level features.
    - Dropout(0.5): Prevents overfitting.
    - Output Layer (10 classes + Softmax): Classifies the CIFAR-10 dataset into 10 categories.
+# Compile the Model
+```python
+model.compile(loss='sparse_categorical_crossentropy', optimizer=Adam(learning_rate=0.005), metrics=['sparse_categorical_accuracy'])
+![image](https://github.com/user-attachments/assets/41343373-9c00-4b0a-ad59-c2f44a57a5ce)
+```
+- **Loss Function**: `sparse_categorical_crossentropy` (suitable for labels that are not one-hot encoded).  
+- **Optimizer**: `Adam` with a learning rate of 0.005.  
+- **Evaluation Metric**: `sparse_categorical_accuracy` to measure prediction accuracy.  
