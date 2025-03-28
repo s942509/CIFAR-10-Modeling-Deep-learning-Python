@@ -164,4 +164,22 @@ hist = model.fit(datagen.flow(X_train[:train_samples], y_train[:train_samples], 
   - Trains on `X_train[:train_samples]` (approximately 45,000 images).  
   - `steps_per_epoch = train_samples / batch_size` determines the number of mini-batch iterations per epoch.  
   - `epochs=10`: Trains the model for 10 epochs (adjustable).  
-  - **validation_data**: Uses 5,000 validation images for evaluation.  
+  - **validation_data**: Uses 5,000 validation images for evaluation.
+# Plot Training Results
+```python
+train_loss = hist.history["loss"]
+val_loss = hist.history["val_loss"]
+
+plt.figure(figsize=(8, 4))
+plt.plot(range(len(train_loss)), train_loss, label='train_loss')
+plt.plot(range(len(val_loss)), val_loss, label='valid_loss')
+plt.xlabel('epoch', fontsize=16)
+plt.ylabel('loss', fontsize=16)
+plt.yscale('log')
+plt.legend(fontsize=16)
+plt.show()
+![image](https://github.com/user-attachments/assets/40240724-912b-4a8c-a57f-6cea9201175e)
+```
+- Plots the changes in **training loss (`train_loss`)** and **validation loss (`val_loss`)**.  
+- Uses a logarithmic scale for the y-axis (`yscale('log')`) to better observe value changes.  
+- If the validation loss continues to decrease, it indicates that the model is learning meaningful features.    
